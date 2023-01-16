@@ -1,15 +1,20 @@
 import { useState } from "react";
+import styles from "./hm-drawing.module.scss";
 
 const HEAD = (
-    <div className='head'></div>
+    <div className={styles.head}></div>
 )
 
 const BODY = (
-    <div className='body'></div>
+    <div className={styles.body}></div>
 )
 
 const RIGHT_ARM = (
-    <div className='right-arm'></div>
+    <div className={styles.rightArm}></div>
+)
+
+const LEFT_ARM = (
+    <div className={styles.leftArm}></div>
 )
 
 // 14:46
@@ -21,6 +26,7 @@ function HangmanDrawing() {
             {HEAD}
             {BODY}
             {RIGHT_ARM}
+            {LEFT_ARM}
             <div className='hangman__rope'></div>
             <div className='hangman__top-bar'></div>
             <div className='hangman__center-bar'></div>
