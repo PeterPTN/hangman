@@ -1,0 +1,111 @@
+.hangman {
+  position: relative;
+}
+.hangman__rope {
+  height: 50px;
+  width: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+}
+.hangman__top-bar {
+  height: 10px;
+  width: 200px;
+  background-color: black;
+  margin-left: 120px;
+}
+.hangman__center-bar {
+  margin-left: 120px;
+  width: 10px;
+  height: 400px;
+  background-color: black;
+}
+.hangman__bottom-bar {
+  width: 250px;
+  height: 10px;
+  background-color: black;
+}
+
+.head {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 10px solid black;
+  position: absolute;
+  top: 50px;
+  right: -20px;
+}
+
+.body {
+  background-color: black;
+  position: absolute;
+  width: 10px;
+  height: 100px;
+  right: 0;
+  top: 100px;
+}
+
+.right-arm {
+  background-color: black;
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  right: -100px;
+  top: 130px;
+  rotate: -30deg;
+  transform-origin: left bottom;
+}
+
+/* Global CSS styles + Reset*/
+:root {
+  font-size: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Single line truncate */
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Multi line truncate */
+.multi-truncate {
+  line-height: 2rem;
+  max-height: 4rem;
+  -webkit-box-orient: vertical;
+  display: block;
+  display: -webkit-box;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}
+
+/* ---- Styles ---- */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+  margin: 0 auto;
+  max-width: 800px;
+}
