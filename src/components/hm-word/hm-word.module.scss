@@ -1,0 +1,11 @@
+.word {
+    display: flex;
+    gap: .25em;
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.letter {
+    border-bottom: 2px solid black;
+}

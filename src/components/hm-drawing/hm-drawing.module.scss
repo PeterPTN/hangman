@@ -1,34 +1,34 @@
 .hangman {
     position: relative;
+}
 
-    &__rope {
-        height: 50px;
-        width: 10px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        background-color: black;
-    }
+.rope {
+    height: 50px;
+    width: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+}
 
-    &__top-bar {
-        height: 10px;
-        width: 200px;
-        background-color: black;
-        margin-left: 120px;
-    }
+.top_bar {
+    height: 10px;
+    width: 200px;
+    background-color: black;
+    margin-left: 120px;
+}
 
-    &__center-bar {
-        margin-left: 120px;
-        width: 10px;
-        height: 400px;
-        background-color: black;
-    }
+.enter_bar {
+    margin-left: 120px;
+    width: 10px;
+    height: 400px;
+    background-color: black;
+}
 
-    &__bottom-bar {
-        width: 250px;
-        height: 10px;
-        background-color: black;
-    }
+.bottom_bar {
+    width: 250px;
+    height: 10px;
+    background-color: black;
 }
 
 .head {
@@ -69,5 +69,27 @@
     right: 0px;
     top: 135px;
     rotate: 30deg;
+    transform-origin: right bottom;
+}
+
+.rightLeg {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    background-color: black;
+    top: 190px;
+    right: -90px;
+    rotate: 60deg;
+    transform-origin: left bottom;
+}
+
+.leftLeg {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    background-color: black;
+    top: 190px;
+    right: 0px;
+    rotate: -60deg;
     transform-origin: right bottom;
 }
