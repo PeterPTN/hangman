@@ -1,10 +1,26 @@
 import { useState } from "react";
+import styles from "./hm-word.module.scss";
 
-function HangmanWord() {
+type HangmanWordProps = {
+    guessedLetters: string[],
+    wordToGuess: string,
+    reveal?: boolean
+}
 
+function HangmanWord({ guessedLetters, wordToGuess, reveal = false }: HangmanWordProps) {
     return (
-        <div>
-            
+        <div className={styles.word}>
+            {wordToGuess.split("").map((letter, index) => (
+                // Each Index Is a Unique ID 
+                <span className={styles.letter} key={index}>
+                    <span style={{
+                        visibility: guessedLetters.includes(letter) || reveal
+                            ? "visible"
+                            : "hidden",
+                        color: !guessedLetters.includes(letter) && reveal ? "red" : "black"
+                    }}>{letter}</span>
+                </span>
+            ))}
         </div>
     )
 }

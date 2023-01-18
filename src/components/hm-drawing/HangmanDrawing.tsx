@@ -1,30 +1,45 @@
-import { useState } from "react";
+import styles from "./hm-drawing.module.scss";
 
 const HEAD = (
-    <div className='head'></div>
+    <div key={0} className={styles.head}></div>
 )
 
 const BODY = (
-    <div className='body'></div>
+    <div key={1} className={styles.body}></div>
 )
 
 const RIGHT_ARM = (
-    <div className='right-arm'></div>
+    <div key={2} className={styles.rightArm}></div>
 )
 
-// 14:46
-// https://www.youtube.com/watch?v=-ONUyenGnWw&t=185s
-function HangmanDrawing() {
+const LEFT_ARM = (
+    <div key={3} className={styles.leftArm}></div>
+)
 
+const RIGHT_LEG = (
+    <div key={4}className={styles.rightLeg}></div>
+)
+
+const LEFT_LEG = (
+    <div key={5} className={styles.leftLeg}></div>
+)
+
+const BODY_PARTS = [
+    HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG
+]
+
+type HangmanDrawingProps = {
+    numberOfGuesses: number
+}
+
+function HangmanDrawing({ numberOfGuesses }: HangmanDrawingProps) {
     return (
-        <div className='hangman'>
-            {HEAD}
-            {BODY}
-            {RIGHT_ARM}
-            <div className='hangman__rope'></div>
-            <div className='hangman__top-bar'></div>
-            <div className='hangman__center-bar'></div>
-            <div className='hangman__bottom-bar'></div>
+        <div className={styles.hangman}>
+            {BODY_PARTS.slice(0, numberOfGuesses)}
+            <div className={styles.rope}></div>
+            <div className={styles.top_bar}></div>
+            <div className={styles.enter_bar}></div>
+            <div className={styles.bottom_bar}></div>
         </div>
     )
 };
