@@ -34,7 +34,6 @@ type KeyboardProps = {
     activeLetters: string[],
     inactiveLetters: string[],
     addGuessedLetter: (letter: string) => void,
-    // Optional var
     disabled?: boolean
 }
 
@@ -42,7 +41,7 @@ function Keyboard({ activeLetters, inactiveLetters, addGuessedLetter, disabled =
     KeyboardProps) {
 
     return (
-        <div style={{ alignSelf: "stretch" }}>
+        <div className={styles.container}>
             <div className={styles.keyboard}>
                 {KEYS.map((key) => {
                     const isActive = activeLetters.includes(key);
